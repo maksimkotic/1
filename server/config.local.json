@@ -1,0 +1,7 @@
+{
+  "port": 3001,
+  "databaseUrl": "postgresql://neondb_owner:npg_p5BOWzUrAy4D@ep-aged-silence-an3vqfap-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+  "jwtSecret": "l0RGqTxm8VJo1fOgjnM9HAwSkYCDV2EL6wMlNBzUNWI=",
+  "corsOrigin": "http://127.0.0.1:5500"
+}
+

@@ -1,0 +1,105 @@
+.auth-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-trigger__user {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 22ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.auth-modal[hidden] {
+  display: none;
+}
+
+.auth-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(11, 19, 43, 0.55);
+}
+
+.auth-modal__panel {
+  width: min(560px, 100%);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.auth-modal__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(11, 19, 43, 0.08);
+}
+
+.auth-modal__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.auth-tab {
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+.auth-tab[aria-selected="true"] {
+  border-bottom-color: currentColor;
+}
+
+.auth-form {
+  margin-top: 14px;
+  display: grid;
+  gap: 14px;
+}
+
+.auth-alert {
+  min-height: 18px;
+  font-size: 13px;
+  color: #b32020;
+}
+
+.auth-close {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--fg);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.auth-close:hover {
+  border-color: rgba(11, 19, 43, 0.28);
+}
+

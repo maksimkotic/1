@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="Масштаб проблемы загрязнения океанов: пластик, нефть и деградация экосистем."
+    />
+    <title>Загрязнение океанов • Масштаб проблемы</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./src/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">К содержимому</a>
+
+    <header class="site-header" data-sticky>
+      <div class="container">
+        <div class="site-header__inner">
+          <a class="brand" href="./index.html" aria-label="На главную">
+            <span class="brand__text">Геоэкология • Водные ресурсы</span>
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Меню"
+            aria-expanded="false"
+            data-nav-toggle
+          >
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 7h14M5 12h14M5 17h14"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+
+          <nav class="nav" aria-label="Основная навигация" data-nav>
+            <a class="nav__link" href="./index.html">Главная</a>
+            <a class="nav__link" href="./about.html">Основы</a>
+            <a class="nav__link" href="./freshwater.html">Кризис</a>
+            <a class="nav__link is-active" href="./ocean.html">Океан</a>
+            <a class="nav__link" href="./impact.html">Фактор</a>
+            <a class="nav__link" href="./solutions.html">Решения</a>
+            <a class="nav__link" href="./contacts.html">Контакты</a>
+            <span class="auth-trigger">
+              <span class="auth-trigger__user" data-auth-user hidden></span>
+              <a class="nav__link" href="#auth" data-auth-open>Вход</a>
+              <a class="nav__link" href="#logout" data-auth-logout hidden>Выход</a>
+            </span>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-backdrop" hidden data-nav-backdrop></div>
+
+    <main id="content">
+      <div class="container">
+        <h1 class="page-title">Загрязнение океанов</h1>
+        <p class="section__lead" style="max-width: 75ch">
+          Здесь важен масштаб: пластик и нефтепродукты превращают океан в среду с
+          долгими “хвостами” загрязнения — от поверхности до донных отложений и
+          пищевых цепей.
+        </p>
+      </div>
+
+      <section
+        class="wide-parallax"
+        aria-label="Масштаб проблемы"
+      >
+        <div
+          class="wide-parallax__bg"
+          aria-hidden="true"
+          data-wide-parallax
+          style="background-image: url('./src/assets/ocean/polluted-ocean.jpg')"
+        ></div>
+        <div class="wide-parallax__shade" aria-hidden="true"></div>
+
+        <div class="container">
+          <div class="wide-parallax__cards">
+            <article class="overlay-card">
+              <h2 class="overlay-card__title">Пластик</h2>
+              <p class="overlay-card__text">
+                В океан попадает и крупный мусор, и микропластик. Он не “исчезает”,
+                а распадается на фрагменты, переносится течениями и накапливается
+                в прибрежных зонах и донных отложениях.
+              </p>
+            </article>
+
+            <article class="overlay-card">
+              <h2 class="overlay-card__title">Нефтепродукты</h2>
+              <p class="overlay-card__text">
+                Разливы нефти и хронические выбросы создают плёнки на поверхности,
+                ухудшают газообмен и поражают птиц и морских млекопитающих.
+                Последствия могут сохраняться годами.
+              </p>
+            </article>
+
+            <article class="overlay-card">
+              <h2 class="overlay-card__title">Экосистемы</h2>
+              <p class="overlay-card__text">
+                Загрязнение усиливает стресс от потепления и закисления воды.
+                Результат — деградация местообитаний, снижение биоразнообразия и
+                устойчивости рифов и прибрежных экосистем.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="До и после">
+        <div class="container">
+          <div class="section__grid">
+            <div>
+              <h2 class="section__title">Шторка “до/после”</h2>
+              <p class="section__lead">
+                Перетяни вертикальный ползунок: слева — “живой” риф, справа —
+                обесцвечивание/деградация.
+              </p>
+            </div>
+
+            <div class="before-after" data-before-after>
+              <div class="before-after__frame">
+                <img
+                  class="before-after__img"
+                  src="./src/assets/ocean/reef-bleached.jpg"
+                  alt="Риф в состоянии обесцвечивания"
+                  loading="eager"
+                />
+                <img
+                  class="before-after__img before-after__img--overlay"
+                  data-clip
+                  src="./src/assets/ocean/reef-healthy.jpg"
+                  alt="Здоровый коралловый риф"
+                  loading="eager"
+                />
+                <div class="before-after__handle" data-handle aria-hidden="true">
+                  <div class="before-after__line"></div>
+                  <div class="before-after__knob"></div>
+                </div>
+                <input
+                  class="before-after__range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Сравнение: до/после"
+                />
+              </div>
+              <div class="before-after__labels muted" aria-hidden="true">
+                <span>← Деградация</span>
+                <span>Здоровый риф →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer">
+          <div class="footer__brand">
+            <div class="footer__title">Геоэкология • Водные ресурсы</div>
+            <div class="footer__meta muted">
+              Учебный проект • Версия: черновик • Обновлено: <span data-today></span>
+            </div>
+          </div>
+
+          <div class="footer__cols">
+            <div class="footer__col">
+              <div class="footer__k">Навигация</div>
+              <a class="footer__link" href="./index.html">Главная</a>
+              <a class="footer__link" href="./about.html">Основы дисциплины</a>
+              <a class="footer__link" href="./freshwater.html">Кризис пресных вод</a>
+              <a class="footer__link" href="./ocean.html">Загрязнение океанов</a>
+              <a class="footer__link" href="./impact.html">Антропогенный фактор</a>
+              <a class="footer__link" href="./solutions.html">Решения и защита</a>
+              <a class="footer__link" href="./contacts.html">Контакты</a>
+            </div>
+            <div class="footer__col">
+              <div class="footer__k">Атрибуция</div>
+              <div class="muted">Фон: Wikimedia Commons (CC BY-SA 3.0).</div>
+              <div class="muted">Фото рифов: Public domain / CC BY 3.0.</div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__k">Авторство</div>
+              <div class="muted">© <span id="year"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./src/scripts/core.js" defer></script>
+    <script src="./src/scripts/wide-parallax.js" defer></script>
+    <script src="./src/scripts/ocean.js" defer></script>
+    <script src="./src/scripts/auth-ui.js" defer></script>
+  </body>
+</html>
